@@ -1,0 +1,28 @@
+<>
+  {[
+    { color: 'primary', textColor: 'primary' },
+    { color: 'secondary', textColor: 'secondary' },
+    { color: 'success', textColor: 'success' },
+    { color: 'danger', textColor: 'danger' },
+    { color: 'warning', textColor: 'warning' },
+    { color: 'info', textColor: 'info' },
+    { color: 'light' },
+    { color: 'dark' },
+  ].map((item, index) => (
+    <CCard
+      textColor={item.textColor}
+      className={`mb-3 border-top-${item.color} border-top-3`}
+      style={{ maxWidth: '18rem' }}
+      key={index}
+    >
+      <CCardHeader>Header</CCardHeader>
+      <CCardBody>
+        <CCardTitle>{item.color} card title</CCardTitle>
+        <CCardText>
+          Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </CCardText>
+      </CCardBody>
+    </CCard>
+  ))}
+</>
